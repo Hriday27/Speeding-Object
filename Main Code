@@ -1,0 +1,28 @@
+float x = 0;
+float y = -this.height/2;
+
+float r = 100;
+
+float gravity = 1;
+float velocity = 0.001;
+
+void setup(){
+  size(600,600);
+}
+
+void draw(){
+  background(255);
+  translate(width/2, height/2);
+  
+  
+  fill(0);
+  ellipse(x,y,r,r);
+  
+  y+=gravity;
+  gravity += velocity;
+  velocity += 0.001;
+  
+  if(y >= this.height/2){
+    y = -this.height/2 + 50;
+  }
+}
